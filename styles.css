@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  background-size: 200% 200%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+/* Animation for the gradient */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.game-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cell.taken {
+  pointer-events: none;
+}
+
+.status {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.reset, .new-game {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset:hover, .new-game:hover {
+  background-color: #555;
+}
+
+/* Result Screen */
+.result-screen {
+  text-align: center;
+  color: #fff;
+}
+
+.result-screen h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.new-game {
+  padding: 15px 30px;
+  font-size: 1rem;
+}
